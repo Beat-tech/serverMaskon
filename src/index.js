@@ -10,6 +10,9 @@ const app = express();
 const host = "localhost" || process.env.HOST;
 const port = process.env.PORT || 5000;
 
+//ficheros estaticos
+app.use(express.static(__dirname + "/public"));
+
 app.get("/", (req, res) => {
   res.redirect("index.html");
 });
