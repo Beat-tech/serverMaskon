@@ -7,11 +7,16 @@
 
 const express = require("express");
 const app = express();
-var cors = require("cors");
+const cors = require("cors");
 const host = "localhost" || process.env.HOST;
 const port = process.env.PORT || 5000;
 
-app.use(cors());
+var corsOptions = {
+  origin: "*",
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 //ficheros estaticos
 app.use(express.static(__dirname + "/public"));
 
