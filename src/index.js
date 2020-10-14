@@ -1,4 +1,5 @@
 const http = require("./app");
-http.listen(5000, () => {
+const port = process.env.PORT || 5000;
+http.listen(port, () => {
   console.log("Servidor en puerto 5000");
 });
