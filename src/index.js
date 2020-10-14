@@ -11,7 +11,10 @@ const host = "localhost" || process.env.HOST;
 const port = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.redirect("index.html");
+});
+app.get("/visualizar", (req, res) => {
+  res.redirect("visualizar.html");
 });
 
 app.listen(port, () => {
