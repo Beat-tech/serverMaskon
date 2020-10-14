@@ -8,7 +8,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const socketIO = require('socket.io'),
+const socketIO = require("socket.io");
 const host = "localhost" || process.env.HOST;
 const port = process.env.PORT || 5000;
 
@@ -27,7 +27,6 @@ app.get("/", (req, res) => {
 app.get("/visualizar", (req, res) => {
   res.redirect("visualizar.html");
 });
-
 
 io.on("connection", (socket) => {
   console.log("new connection", socket);
@@ -49,8 +48,6 @@ io.on("evento_video", (dato) => {
 });
 
 io.serveClient();
-
-
 
 var server = app.listen(port, () => {
   console.log("Servidor en ip: " + host + " puerto:" + port);
