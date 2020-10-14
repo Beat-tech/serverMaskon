@@ -8,7 +8,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const socketIO = require("socket.io");
+const io = require("socket.io");
 const host = "localhost" || process.env.HOST;
 const port = process.env.PORT || 5000;
 
