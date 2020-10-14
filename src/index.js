@@ -52,8 +52,8 @@ io.serveClient();
 
 
 
-app.listen(port, () => {
+var server = app.listen(port, () => {
   console.log("Servidor en ip: " + host + " puerto:" + port);
 });
 
-io = socketIO(app);
+io = socketIO(server);
