@@ -5,10 +5,10 @@ const io = require("socket.io")(http, { path: "/socket.io" }); //para poder llam
 
 //routes
 
-app.use(require("./routes/streamingvideo.routes"));
+//app.use(require("./routes/streamingvideo.routes"));
 
 //ficheros estaticos
-app.use(express.static(__dirname + "/public"));
+//pp.use(express.static(__dirname + "/public"));
 
 //streaming de video
 
@@ -33,7 +33,3 @@ io.on("evento_video", (dato) => {
 
 io.serveClient();
 module.exports = http;
-
-// http.listen(5000);
-//http://www.jlmonteagudo.com/2012/10/emitir-video-con-tu-dispositivo-movil-con-node-js-express-js-y-socket-io/
-//https://www.youtube.com/watch?v=0wqteZNqruc
